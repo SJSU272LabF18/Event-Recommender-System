@@ -5,7 +5,7 @@
 
 ## Project Ideas for CMPE 272
 
-### 1: SJSU Course Buddy
+### 1: SJSU Course Buddy (course assistant)
 
 One of the many challenges faced by SJSU students is selecting courses. It is confusing since every professor designs the course content, assignments, and projects uniquely. The students sometimes end up taking courses that might not suit their interests or might not fit in well with other courses they want to take up. If they get access to some resources of previous semesters such as course content, assignment questions, and skill set needed for successful course completion, it would aid the students in selecting courses. SJSU Course Buddy is a chatbot designed to ease the process of course selection. It can analyze all the data and apply filters specified by users to come up with suggestions for a possible combination of courses. Currently, we do not have the data about course resources but if we get these resources through SJSU, then it would be a fun project to work on.
 
