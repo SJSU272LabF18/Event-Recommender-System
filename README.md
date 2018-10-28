@@ -3,7 +3,7 @@
 #### Project Collaborators: [Shivam Waghela](https://github.com/shivamwaghela), [Mugdha Wadikar](https://github.com/Mugdha001), [Amruta Saraf](https://github.com/amsaraf), [Jai Chhatre](https://github.com/c-jai).
 
 
-## Project Ideas for CMPE 272
+## Project Ideas for CMPE 272 - None of these ideas approved, submit more..
 
 ### 1: SJSU Course Buddy (course assistant)
 
