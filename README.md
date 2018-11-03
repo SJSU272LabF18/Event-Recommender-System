@@ -32,3 +32,13 @@ The output of the predictive churn model will be a measure of the immediate or f
 ### 4. Baymax for Academia - Student Companion ChatBot
 
 Students are found to be overwhelmed by their hectic school schedule and face difficulties keeping up with time management. The Student Companion Chat Bot will act as a student's personal assistant. It will help students manage their class schedule, plan their homework, assignments, exams. The chatbot will regularly check student's progress by taking feedbacks. This app will not be limited to just managing student's academia but will also take other factors into account which can affect a student's academic performance like sleep time, extra-curricular activities. Alongside academic planning, it will provide suggestions to maintain mental and physical health based on the student's schedule. Students can interact with our lovely Baymax chatbot through text or by selecting one of the suggested answers. The app will constantly learn from user's preferences and feedbacks which will help in improving its future suggestions. 
+
+### 5. Kickstarter Success Predictor
+
+### Problem Statement:
+When a project is started on kickstarter, the VCs are pretty much interested and eager to know about the potential of the project and the expected outcome generated from it. Also, for fund raising, if the project team has a model to predict if the kickstarter project can be funded or not, they can be guided in taking the steps to convert their kickstarter into success. The model takes previous kickstarter campaign data and predicts whether a given current kickstarter project will successfully be funded.
+
+### Proposed Solution:
+Machine learning models such as SVM on the training dataset. Given the user project input, we can determine the probability of it being successful or not.
+
+Data set: https://www.kaggle.com/kemical/kickstarter-projects
