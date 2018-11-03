@@ -42,3 +42,20 @@ When a project is started on kickstarter, the VCs are pretty much interested and
 Machine learning models such as SVM on the training dataset. Given the user project input, we can determine the probability of it being successful or not.
 
 Data set: https://www.kaggle.com/kemical/kickstarter-projects
+
+### 6. Scandal Prediction
+### Problem Statement: 
+The Enron scandal and collapse was one of the largest corporate meltdowns in history.
+In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
+
+### Proposed Solution:
+Anomaly detection : Map the distribution of emails sent and received by hour and try to detect abnormal behavior leading up to the public scandal.
+Social network analysis: Build network graph models between employees to find key influencers.
+Natural language processing: Analyze the body messages in conjunction with email metadata to classify emails based on their purposes.
+
+Technology: IBM Watson, JanusGraph for graph database.
+
+Datataset: http://www.cs.cmu.edu/~enron/
+
+
+
