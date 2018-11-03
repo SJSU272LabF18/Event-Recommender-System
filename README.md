@@ -17,17 +17,7 @@ Through IOT Sensors and Cameras attached in the library, the student can check t
 Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
 This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
 
-### B. Kickstarter Success Predictor
-
-### Problem Statement:
-When a project is started on kickstarter, the VCs are pretty much interested and eager to know about the potential of the project and the expected outcome generated from it. Also, for fund raising, if the project team has a model to predict if the kickstarter project can be funded or not, they can be guided in taking the steps to convert their kickstarter into success. The model takes previous kickstarter campaign data and predicts whether a given current kickstarter project will successfully be funded.
-
-### Proposed Solution:
-Machine learning models such as SVM on the training dataset. Given the user project input, we can determine the probability of it being successful or not.
-
-Data set: https://www.kaggle.com/kemical/kickstarter-projects
-
-### C. Scandal Prediction
+### B. Scandal Prediction
 ### Problem Statement: 
 The Enron scandal and collapse was one of the largest corporate meltdowns in history.
 In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
@@ -41,7 +31,7 @@ Technology: IBM Watson, JanusGraph for graph database.
 
 Datataset: http://www.cs.cmu.edu/~enron/
 
-### D. SJSU Eventbrite Project
+### C. SJSU Eventbrite Project
 ### Project Description:
 The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
 The proposed methodology for this project is: 
