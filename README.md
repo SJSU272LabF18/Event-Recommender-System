@@ -66,3 +66,17 @@ The proposed methodology for this project is:
 3. Enable students to add and host different events.
 4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
 
+### 8 . The Marauders Map for Library Assistance
+### Problem Description:
+Students prefering to study in libraries often face situations such as finding a table in library to study alone or in group. In peak hours, students search the entire floor numerous times to find a place to sit and their time is wasted in this process.
+Currently, the MLK library has a provision to book study rooms online but there is no real time tracking of the booked room actually being used. Also, there is no system in the library to get real time data of available study tables on each floor. 
+### Proposed Solution:
+The Marauders map has a complete visual of each floor. Also, for visually impaired students, it is voice enabled. 
+Through IOT Sensors and Cameras attached in the library, the student can check the real time status of availability of study tables in library.
+Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
+This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
+
+
+
+
+
