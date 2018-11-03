@@ -57,5 +57,12 @@ Technology: IBM Watson, JanusGraph for graph database.
 
 Datataset: http://www.cs.cmu.edu/~enron/
 
-
+### 7. SJSU Eventbrite Project
+### Project Description:
+The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
+The proposed methodology for this project is: 
+1. Understand the likes, dislikes, interests of students through their choices made on Sammy App.
+2. Categorize events available in SJSU through Sammy App under different categories.
+3. Enable students to add and host different events.
+4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
 
