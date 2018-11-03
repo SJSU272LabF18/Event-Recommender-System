@@ -11,8 +11,7 @@
 Course selection in college. It is confusing since every professor designs the course content, assignments, and projects uniquely. The students sometimes end up taking courses that might not suit their interests or might not fit in well with other courses they want to take up. If they get access to some resources of previous semesters such as course content, assignment questions, and skill set needed for successful course completion, it would aid the students in selecting courses. 
 ### Solution:
 SJSU Course Buddy is a chatbot designed to ease the process of course selection. It can analyze all the data and apply filters specified by users to come up with suggestions for a possible combination of courses. Currently, we do not have the data about course resources but if we get these resources through SJSU, then it would be a fun project to work on.
-### Technologies: 
-NLP, IBM Watson
+
 
 ### 2: Munchy (chatbot to suggest recipes)
 
