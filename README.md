@@ -5,6 +5,55 @@
 
 ## Project Ideas for CMPE 272 - None of these ideas approved, submit more..
 
+### New Topics:
+
+### A . The Marauders Map for Library Assistance
+### Problem Description:
+Students prefering to study in libraries often face situations such as finding a table in library to study alone or in group. In peak hours, students search the entire floor numerous times to find a place to sit and their time is wasted in this process.
+Currently, the MLK library has a provision to book study rooms online but there is no real time tracking of the booked room actually being used. Also, there is no system in the library to get real time data of available study tables on each floor. 
+### Proposed Solution:
+The Marauders map has a complete visual of each floor. Also, for visually impaired students, it is voice enabled. 
+Through IOT Sensors and Cameras attached in the library, the student can check the real time status of availability of study tables in library.
+Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
+This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
+
+### B. Kickstarter Success Predictor
+
+### Problem Statement:
+When a project is started on kickstarter, the VCs are pretty much interested and eager to know about the potential of the project and the expected outcome generated from it. Also, for fund raising, if the project team has a model to predict if the kickstarter project can be funded or not, they can be guided in taking the steps to convert their kickstarter into success. The model takes previous kickstarter campaign data and predicts whether a given current kickstarter project will successfully be funded.
+
+### Proposed Solution:
+Machine learning models such as SVM on the training dataset. Given the user project input, we can determine the probability of it being successful or not.
+
+Data set: https://www.kaggle.com/kemical/kickstarter-projects
+
+### C. Scandal Prediction
+### Problem Statement: 
+The Enron scandal and collapse was one of the largest corporate meltdowns in history.
+In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
+
+### Proposed Solution:
+Anomaly detection : Map the distribution of emails sent and received by hour and try to detect abnormal behavior leading up to the public scandal.
+Social network analysis: Build network graph models between employees to find key influencers.
+Natural language processing: Analyze the body messages in conjunction with email metadata to classify emails based on their purposes.
+
+Technology: IBM Watson, JanusGraph for graph database.
+
+Datataset: http://www.cs.cmu.edu/~enron/
+
+### D. SJSU Eventbrite Project
+### Project Description:
+The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
+The proposed methodology for this project is: 
+1. Understand the likes, dislikes, interests of students through their choices made on Sammy App.
+2. Categorize events available in SJSU through Sammy App under different categories.
+3. Enable students to add and host different events.
+4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
+
+
+
+
+
 ### 1: SJSU Course Buddy (course assistant)
 
 ### Problem Statement:
@@ -33,48 +82,6 @@ The output of the predictive churn model will be a measure of the immediate or f
 
 Students are found to be overwhelmed by their hectic school schedule and face difficulties keeping up with time management. The Student Companion Chat Bot will act as a student's personal assistant. It will help students manage their class schedule, plan their homework, assignments, exams. The chatbot will regularly check student's progress by taking feedbacks. This app will not be limited to just managing student's academia but will also take other factors into account which can affect a student's academic performance like sleep time, extra-curricular activities. Alongside academic planning, it will provide suggestions to maintain mental and physical health based on the student's schedule. Students can interact with our lovely Baymax chatbot through text or by selecting one of the suggested answers. The app will constantly learn from user's preferences and feedbacks which will help in improving its future suggestions. 
 
-### 5. Kickstarter Success Predictor
-
-### Problem Statement:
-When a project is started on kickstarter, the VCs are pretty much interested and eager to know about the potential of the project and the expected outcome generated from it. Also, for fund raising, if the project team has a model to predict if the kickstarter project can be funded or not, they can be guided in taking the steps to convert their kickstarter into success. The model takes previous kickstarter campaign data and predicts whether a given current kickstarter project will successfully be funded.
-
-### Proposed Solution:
-Machine learning models such as SVM on the training dataset. Given the user project input, we can determine the probability of it being successful or not.
-
-Data set: https://www.kaggle.com/kemical/kickstarter-projects
-
-### 6. Scandal Prediction
-### Problem Statement: 
-The Enron scandal and collapse was one of the largest corporate meltdowns in history.
-In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
-
-### Proposed Solution:
-Anomaly detection : Map the distribution of emails sent and received by hour and try to detect abnormal behavior leading up to the public scandal.
-Social network analysis: Build network graph models between employees to find key influencers.
-Natural language processing: Analyze the body messages in conjunction with email metadata to classify emails based on their purposes.
-
-Technology: IBM Watson, JanusGraph for graph database.
-
-Datataset: http://www.cs.cmu.edu/~enron/
-
-### 7. SJSU Eventbrite Project
-### Project Description:
-The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
-The proposed methodology for this project is: 
-1. Understand the likes, dislikes, interests of students through their choices made on Sammy App.
-2. Categorize events available in SJSU through Sammy App under different categories.
-3. Enable students to add and host different events.
-4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
-
-### 8 . The Marauders Map for Library Assistance
-### Problem Description:
-Students prefering to study in libraries often face situations such as finding a table in library to study alone or in group. In peak hours, students search the entire floor numerous times to find a place to sit and their time is wasted in this process.
-Currently, the MLK library has a provision to book study rooms online but there is no real time tracking of the booked room actually being used. Also, there is no system in the library to get real time data of available study tables on each floor. 
-### Proposed Solution:
-The Marauders map has a complete visual of each floor. Also, for visually impaired students, it is voice enabled. 
-Through IOT Sensors and Cameras attached in the library, the student can check the real time status of availability of study tables in library.
-Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
-This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
 
 
 
