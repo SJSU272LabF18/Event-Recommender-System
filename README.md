@@ -7,17 +7,17 @@
 
 ### 1: SJSU Course Buddy (course assistant)
 
-### Problem:
+### Problem Statement:
 Course selection in college. It is confusing since every professor designs the course content, assignments, and projects uniquely. The students sometimes end up taking courses that might not suit their interests or might not fit in well with other courses they want to take up. If they get access to some resources of previous semesters such as course content, assignment questions, and skill set needed for successful course completion, it would aid the students in selecting courses. 
-### Solution:
+### Proposed Solution:
 SJSU Course Buddy is a chatbot designed to ease the process of course selection. It can analyze all the data and apply filters specified by users to come up with suggestions for a possible combination of courses. Currently, we do not have the data about course resources but if we get these resources through SJSU, then it would be a fun project to work on.
 
 
 ### 2: Munchy (chatbot to suggest recipes)
 
-### Problem:
+### Problem Statement:
 Planning our daily meals is always a difficult task. Most of the times we have to plan them in advance and accordingly keep the necessary ingredients stocked up. But owing to our busy schedules, many times we might end up with no meal plans at all; and it is during such times that we have to make the best possible use of the available ingredients to come up with a dish. In such regularly occurring situations, it would be of immense help if a tool suggests recipes based on the currently available ingredients and also filters the suggested recipes according to the cuisines we liked.
-### Solution:
+### Proposed Solution:
 Munchy is a chatbot designed to suggest recipes in response to users’ input about the ingredients they can use. It can also filter the suggested recipes as per the cuisine if asked by the user. The user can query Munchy using their natural language. Thus Munchy would serve as an assistant for suggesting meals and thus make the task of meal-planning less daunting.
 
 
