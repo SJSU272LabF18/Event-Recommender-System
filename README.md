@@ -15,8 +15,10 @@ SJSU Course Buddy is a chatbot designed to ease the process of course selection.
 
 ### 2: Munchy (chatbot to suggest recipes)
 
-Problem: Planning our daily meals is always a difficult task. Most of the times we have to plan them in advance and accordingly keep the necessary ingredients stocked up. But owing to our busy schedules, many times we might end up with no meal plans at all; and it is during such times that we have to make the best possible use of the available ingredients to come up with a dish. In such regularly occurring situations, it would be of immense help if a tool suggests recipes based on the currently available ingredients and also filters the suggested recipes according to the cuisines we liked.
-Solution: Munchy is a chatbot designed to suggest recipes in response to users’ input about the ingredients they can use. It can also filter the suggested recipes as per the cuisine if asked by the user. The user can query Munchy using their natural language. Thus Munchy would serve as an assistant for suggesting meals and thus make the task of meal-planning less daunting.
+### Problem:
+Planning our daily meals is always a difficult task. Most of the times we have to plan them in advance and accordingly keep the necessary ingredients stocked up. But owing to our busy schedules, many times we might end up with no meal plans at all; and it is during such times that we have to make the best possible use of the available ingredients to come up with a dish. In such regularly occurring situations, it would be of immense help if a tool suggests recipes based on the currently available ingredients and also filters the suggested recipes according to the cuisines we liked.
+### Solution:
+Munchy is a chatbot designed to suggest recipes in response to users’ input about the ingredients they can use. It can also filter the suggested recipes as per the cuisine if asked by the user. The user can query Munchy using their natural language. Thus Munchy would serve as an assistant for suggesting meals and thus make the task of meal-planning less daunting.
 
 
 ### 3. A predictive model for customer churn
