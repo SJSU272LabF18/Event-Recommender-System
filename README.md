@@ -16,7 +16,8 @@ The Marauders map has a complete visual of each floor. Also, for visually impair
 Through IOT Sensors and Cameras attached in the library, the student can check the real time status of availability of study tables in library.
 Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
 This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
-Technology : Raspberry PI, IR sensors, Server, Python, MongoDB
+### Technology : 
+Raspberry PI, Weight sensors, Server, Python, MongoDB
 
 ### B. Scandal Prediction
 ### Problem Statement: 
