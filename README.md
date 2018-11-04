@@ -7,19 +7,7 @@
 
 ### New Topics:
 
-### A . The Marauders Map for Library Assistance
-### Problem Description:
-Students prefering to study in libraries often face situations such as finding a table in library to study alone or in group. In peak hours, students search the entire floor numerous times to find a place to sit and their time is wasted in this process.
-Currently, the MLK library has a provision to book study rooms online but there is no real time tracking of the booked room actually being used. Also, there is no system in the library to get real time data of available study tables on each floor. 
-### Proposed Solution:
-The Marauders map has a complete visual of each floor. Also, for visually impaired students, it is voice enabled. 
-Through IOT Sensors and Cameras attached in the library, the student can check the real time status of availability of study tables in library.
-Through this collected data, Machine Learning algorithms can be implemented to predict the rush hours in library.
-This project can be further implemented in other public places which have cameras and sensors installed to check real time status of seats.
-### Technology : 
-Raspberry PI, Weight sensors, Server, Python, MongoDB
-
-### B. Scandal Prediction
+### A. Scandal Prediction
 ### Problem Statement: 
 The Enron scandal and collapse was one of the largest corporate meltdowns in history.
 In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
@@ -33,7 +21,7 @@ Technology: IBM Watson, JanusGraph for graph database.
 
 Datataset: http://www.cs.cmu.edu/~enron/
 
-### C. SJSU Eventbrite Project
+### B. SJSU Eventbrite Project
 ### Project Description:
 The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
 The proposed methodology for this project is: 
