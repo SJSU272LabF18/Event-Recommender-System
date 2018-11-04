@@ -7,7 +7,15 @@
 
 ### New Topics:
 
-### A. Scandal Prediction
+### A. Munchy, NLP based meal assistant
+### Problem Statement:
+Many times we forget to stock up necessary ingredients and have to come up with recipes containing only the currently available ingredients. Usually we opt to search for recipes on internet. It is difficult to search for the relevant recipes when we have to type names of all the ingredients that we want to use. Also once we come across recipe-cards, preparing a meal can be cumbersome if we kept pausing every now and then, to check for the next instruction in the recipe card.
+### Proposed Solution:
+Munchy(an android app with NLP implementation): it provides all the assistance needed for preparing a meal - right from suggesting recipes based on your available ingredients and cuisine preference to verbally guiding the user through each step of the recipe based on the available ingredients.
+We can verbally inform munchy about available ingredients and desired cuisine, it will read aloud the names of top 3 recipes and also list them on the screen. Munchy would also inform us about the extra ingredients required. We can select any recipe either verbally or by clicking on the displayed names.  We can also ask munchy to read all the instructions of the recipe step by step. Every time we finish a step we can say "done" and then munchy would read aloud the next step. This would help us to prepare meals without the hassle of pausing to read the recipe-card every now and then.
+
+
+### B. Scandal Prediction
 ### Problem Statement: 
 The Enron scandal and collapse was one of the largest corporate meltdowns in history.
 In the year 2000, Enron was one of the largest energy companies in America. Then, after being outed for fraud, it spiraled downward into bankruptcy within a year. Through the public dataset of Emails of Enron's employees, we can apply machine learning to detect or predict if there is some anomaly in any Enterprise or organization.
@@ -21,7 +29,7 @@ Technology: IBM Watson, JanusGraph for graph database.
 
 Datataset: http://www.cs.cmu.edu/~enron/
 
-### B. SJSU Eventbrite Project
+### C. SJSU Eventbrite Project
 ### Project Description:
 The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
 The proposed methodology for this project is: 
@@ -31,7 +39,7 @@ The proposed methodology for this project is:
 4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
 
 
-
+### Previous topics
 
 
 ### 1: SJSU Course Buddy (course assistant)
