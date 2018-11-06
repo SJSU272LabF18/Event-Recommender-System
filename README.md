@@ -58,7 +58,10 @@ Make use of reservation and visitation data to predict the total number of visit
 We often click pictures of posters/flyers for concerts, exhibitions, workshops, etc. and lose track of the events as it is hard to go through the gallery every time to find the dates and location of the event.
 
 ### Proposed solution : 
-Build an application which will recognize the content of the picture, extract the dates and venue and upload this information directly to your Calendar application.
+1.Build an application which will recognize the content of the picture
+2.Extract the dates and venue
+3.Link this with the google calender.
+4.Upload this information directly to your Calendar application.
 
 ### Previous topics
 
