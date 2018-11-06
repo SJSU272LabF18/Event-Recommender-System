@@ -42,11 +42,12 @@ The proposed methodology for this project is:
 ### D. Restaurant customer footfall forecasting application
 ### Project Description:
 
-Problem statement :
-Running a thriving restaurant isn't very easy as it can be very tough to predict the customer footfall.
-Restaurants need to know how many customers to expect each day to effectively purchase ingredients and schedule staff members in order to be successful. This forecast isn't easy to make because many unpredictable factors affect restaurant attendance, like weather and local competition. It's even harder for newer restaurants with little historical data.
+###Problem statement :
+Running a thriving restaurant isn't very easy as it can be very tough to predict the customer footfall.This forecast isn't easy to make because many unpredictable factors affect restaurant attendance, like weather and local competition. It's even harder for newer restaurants with little historical data.
+Restaurants need to know how many customers to expect each day to effectively purchase ingredients and schedule staff members in order to be successful. 
  
-Methodology : Make use of reservation and visitation data to predict the total number of visitors to a restaurant for future dates. This information will help restaurants be much more efficient and allow them to focus on creating an enjoyable dining experience for their customers.
+### Proposed solution : 
+Make use of reservation and visitation data to predict the total number of visitors to a restaurant for future dates. This information will help restaurants be much more efficient and allow them to focus on creating an enjoyable dining experience for their customers.
 
 
 
