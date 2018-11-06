@@ -31,12 +31,15 @@ Datataset: http://www.cs.cmu.edu/~enron/
 
 ### C. SJSU Eventbrite Project
 ### Project Description:
-The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
+The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. The SJSU Eventbrite project draws some information from the Sammy App which hosts generic infrmation about events.
+### Proposed Solution
 The proposed methodology for this project is: 
-1. Understand the likes, dislikes, interests of students through their choices made on Sammy App and give personalized recommendations on that basis.
-2. Categorize events available in SJSU through Sammy App under different categories.
-3. Enable students to add and host different events.
-4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
+1. Categorize events available in SJSU under different categories.
+2. Give personalized recommendations of events based on the likes/dislikes of students.
+3. Students can also host different events.
+4. Create interest groups of students
+5. Recommend interest groups, friends and events based on their likes, dislikes.
+Technology: Graph Database, MongoDB/ CockroachDB, IBM bluemix
 
 
 ### D. Guest predictor for Restaurants
@@ -52,7 +55,7 @@ Make use of reservation and visitation data to predict the total number of visit
 
 ### E. Smart Event Mapper  
 ### Problem Statement:
-We often click pictures of posters/flyers for concerts, exhibitions, workshops, etc. and lose track of the events as it is hard to go through the gallery every time to find the dates and location of the event. 
+We often click pictures of posters/flyers for concerts, exhibitions, workshops, etc. and lose track of the events as it is hard to go through the gallery every time to find the dates and location of the event.
 
 ### Proposed solution : 
 Build an application which will recognize the content of the picture, extract the dates and venue and upload this information directly to your Calendar application.
