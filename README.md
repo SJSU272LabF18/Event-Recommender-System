@@ -59,10 +59,10 @@ We often click pictures of posters/flyers for concerts, exhibitions, workshops, 
 
 ### Proposed solution : 
 
-1.Build an application which will recognize the content of the picture
-2.Extract the dates and venue
-3.Link this with the google calender.
-4.Upload this information directly to your Calendar application.
+1. Build an application which will recognize the content of the picture
+2. Extract the dates and venue
+3. Link this with the google calender.
+4. Upload this information directly to your Calendar application.
 
 ### Previous topics
 
