@@ -33,10 +33,21 @@ Datataset: http://www.cs.cmu.edu/~enron/
 ### Project Description:
 The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. Currently, the Sammy App shows some information about generic events but does not give a holistic view based on students interests. Also, it is not department specific.
 The proposed methodology for this project is: 
-1. Understand the likes, dislikes, interests of students through their choices made on Sammy App.
+1. Understand the likes, dislikes, interests of students through their choices made on Sammy App and give personalized recommendations on that basis.
 2. Categorize events available in SJSU through Sammy App under different categories.
 3. Enable students to add and host different events.
 4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
+
+
+### D. Restaurant customer footfall forecasting application
+### Project Description:
+
+Problem statement :
+Running a thriving restaurant isn't very easy as it can be very tough to predict the customer footfall.
+Restaurants need to know how many customers to expect each day to effectively purchase ingredients and schedule staff members in order to be successful. This forecast isn't easy to make because many unpredictable factors affect restaurant attendance, like weather and local competition. It's even harder for newer restaurants with little historical data.
+ 
+Methodology : Make use of reservation and visitation data to predict the total number of visitors to a restaurant for future dates. This information will help restaurants be much more efficient and allow them to focus on creating an enjoyable dining experience for their customers.
+
 
 
 ### Previous topics
