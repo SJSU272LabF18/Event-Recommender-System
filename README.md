@@ -39,7 +39,7 @@ The proposed methodology for this project is:
 4. Create interest groups of students and suggest interests, friends and events based on their likes, dislikes.
 
 
-### D. Restaurant customer footfall forecasting application
+### D. Guest predictor for Restaurants
 ### Project Description:
 
 ### Problem statement :
