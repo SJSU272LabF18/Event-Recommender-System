@@ -50,6 +50,12 @@ Restaurants need to know how many customers to expect each day to effectively pu
 Make use of reservation and visitation data to predict the total number of visitors to a restaurant for future dates. This information will help restaurants be much more efficient and allow them to focus on creating an enjoyable dining experience for their customers.
 
 
+### E. Smart Event Mapper  
+### Problem Statement:
+We often click pictures of posters/flyers for concerts, exhibitions, workshops, etc. and lose track of the events as it is hard to go through the gallery every time to find the dates and location of the event. 
+
+### Proposed solution : 
+Build an application which will recognize the content of the picture, extract the dates and venue and upload this information directly to your Calendar application.
 
 ### Previous topics
 
