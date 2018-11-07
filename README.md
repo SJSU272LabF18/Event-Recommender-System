@@ -5,7 +5,7 @@
 
 ## Project Ideas for CMPE 272 - None of these ideas approved, submit more..
 
-### New Topics:
+## New Project Topics:
 
 ### A. Munchy, NLP based meal assistant
 ### Problem Statement:
