@@ -29,9 +29,9 @@ Technology: IBM Watson, JanusGraph for graph database.
 
 Datataset: http://www.cs.cmu.edu/~enron/
 
-### C. SJSU Eventbrite Project
+### C. SJSU Hangouts
 ### Project Description:
-The Eventbrite website is an excellent source to search for events of your choice. The SJSU Eventbrite project is based on similar lines. The SJSU Eventbrite project draws some information from the Sammy App which hosts generic infrmation about events.
+SJSU Hangouts is a platform that allows anyone to create, share, find and attend events at SJSU that fuel their passions and enrich their lives. From music festivals, marathons, conferences, community rallies, and fundraisers, to gaming competitions and air guitar contests.
 ### Proposed Solution
 The proposed methodology for this project is: 
 1. Categorize events available in SJSU under different categories.
