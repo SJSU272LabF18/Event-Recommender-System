@@ -5,7 +5,7 @@
 
 ## Project Ideas for CMPE 272 - None of these ideas approved, submit more..
 
-### C. MeetUp
+### MeetUp
 ### Project Description:
 Through Meet-Up you can create, find and attend events that fuel your passion. What’s unique in Meet-up is that apart from suggesting recommendations hand-picked for you, it also predicts footfall expected for the event you are thinking of hosting! Using our footfall prediction, you can plan your events and resources needed for them much efficiently.
 ### Proposed Solution
