@@ -1,0 +1,87 @@
+.list-props props-group-traveler-book-now {
+    margin-top: -20px;
+    height : 500px;
+    
+}
+
+.desc {
+    margin-top: 20px;
+}
+
+.take-to-left {
+    margin-left: 60px;
+    margin-top: 60px;
+    height: auto;
+}
+
+
+
+.book-now-props {
+    margin-top: -20px;
+    height : 500px;
+}
+
+.jumbotron jumbotron-traveler {
+    background-color: #E5E5E5;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
+
+.column {
+    float: left;
+}
+
+.left1 {
+    width: 70%;
+}
+
+.right1 {
+    width: 30%;
+}
+
+.traveler-table {
+    margin-left: 20px;
+    text-align: center ; 
+    border-color: #286090;
+    border-width: thin; 
+    border-style: solid 
+}
+
+td {
+    text-align: center;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+}
+
+.carousel{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    margin-left: 60px;
+}
+
+container .container-traveler{
+
+    background:  none repeat scroll 0 0;
+    border-radius: 2px;
+    max-width: 30%;
+    padding-top: -15px;
+    padding: 5% ;
+ 
+    
+}
+
+.alert{
+    margin-top:600px;
+    margin-left:100px;
+    margin-right: 100px;
+}
+
+.form-control-book-now{
+    margin-left: 30px;
+    width: 235px;
+}
+
+.upper-table{
+    margin-top:10px;
+}

@@ -1,0 +1,55 @@
+.list-props {
+    background-color:#FFFFFF;
+    box-shadow: 0 0 70px 0 rgba(0,0,0,.1);
+}
+
+/* .list-props {
+     
+} */
+
+.imagesearch{
+width:340px;
+}
+.column {
+    float: left;
+}
+
+
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 70%;
+}
+
+
+container .container-traveler{
+
+    background:  none repeat scroll 0 0;
+    border-radius: 2px;
+    max-width: 30%;
+    padding-top: -15px;
+    padding: 5% ;
+ 
+    
+}
+
+.nums{
+    border: 1px solid #2e6da4;
+    height: 33px;
+    width: 36px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5px;
+    display:inline-block;
+  }
+
+  .pagination{
+    padding-left: 550px;
+}
+
+.list-props.props-group-traveler-book-now {
+    margin-top: 30%;
+}

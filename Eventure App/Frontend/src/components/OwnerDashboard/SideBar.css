@@ -1,0 +1,79 @@
+.vertical-menu-owner {
+    width: 200px;
+}
+
+.vertical-menu-owner a {
+    background-color: transparent;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu-owner a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu-owner a.active {
+    color: white;
+}
+
+.main-div-sidebar
+{
+    background-color: #f4f4f4;
+    height: 600px;
+}
+
+.location-form
+{
+  
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 720px;
+    width: 600px;
+    line-height: 50px;
+    box-shadow: 2px 10px 32px -5px #d6d9d6;
+    margin-left: 15%;
+    margin-bottom: 24px;
+    background-color: #fff;
+
+}
+
+.form-control-location
+{
+    margin-left : 20px;
+    
+}
+
+.btn-next
+{
+    margin-left: 40%;
+    margin-top : 100 px;
+}
+
+.form-control-owner-details
+{
+    width : 80%;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.photos-drop-inside {
+    border: 2px dashed #d7d8da;
+    padding-left: 20px;
+    padding-right : 20px;
+    text-align: center;
+    -webkit-transition: border-color .25s;
+    transition: border-color .25s;
+}
+
+.photos-drop-inside input[type="file"] {
+    display: none;
+}
+
+.center-block
+{
+    background: #2e6da4;
+    color:#fff;
+}

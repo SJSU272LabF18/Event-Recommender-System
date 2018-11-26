@@ -1,0 +1,14 @@
+.flex-container-mytrips {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container-mytrips > div {
+    background-color: #f8f8f8;
+    width: 1150px;
+    margin: 15px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px;
+  }
+

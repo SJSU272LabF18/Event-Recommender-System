@@ -1,0 +1,105 @@
+.topnav {
+    background-color: transparent;
+    
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    margin-left: 30px; 
+    float: left;
+    display: block;
+    color : #0067db;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+    margin-top:4%;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #0067db;
+}
+
+
+.topnav a.active {
+    border-bottom: 3px solid #0067db;
+}
+
+.navbar-blue
+{
+    border-bottom: 1px solid #c3c6cc;
+    height: 60px;
+
+}
+
+.topnav
+{
+    border-bottom: 1px solid #c3c6cc;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    margin : 0px;
+}
+
+.form-control{
+    width:30%;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.profile-form-main
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid #c3c6cc;
+}
+
+h3
+{
+    margin-left : 20px;
+}
+
+.save-btn
+{
+    margin-left: 20px;
+}
+
+.avatar
+{
+    width : 100px;
+    height : 100 px;
+    margin-top: 20px;
+}
+
+.photos-drop-inside input[type="file"] {
+    display: none;
+}
+
+.text-center input[type="file"] {
+    display: none;
+
+}
+
+.text-center{
+    margin-top: 5%;
+}
+
+.photos-drop-inside {
+    border: 2px dashed #d7d8da;
+    margin-left: 20px;
+    width: 30%;
+    padding-left: 20px;
+    padding-right : 20px;
+    text-align: center;
+    -webkit-transition: border-color .25s;
+    transition: border-color .25s;
+}
+
+.photos-drop-inside input[type="file"] {
+    display: none;
+}
+
+.center-block
+{
+    background: #2e6da4;
+    color:#fff;
+}

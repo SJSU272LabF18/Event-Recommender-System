@@ -1,0 +1,39 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "server": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.3.0",
+    "kafka-node": "^3.0.1",
+    "mocha": "^5.2.0",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.3",
+    "multer": "^1.4.0",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.4",
+    "uuid": "^3.3.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "description": ""
+}
