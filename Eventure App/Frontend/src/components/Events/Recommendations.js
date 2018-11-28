@@ -9,6 +9,7 @@ import { bindActionCreators } from 'redux';
 import _ from 'lodash'
 import './Recommendations.css'
 import swal from 'sweetalert'
+import {geolocated} from 'react-geolocated';
 import { values } from 'redux-form';
 
 //create the sidebar Component
@@ -20,7 +21,9 @@ class Recommendations extends Component {
             imageView : [],
             current : 1,
             itemsPerPage : 10,
-            activePage : 1
+            activePage : 1,
+            latitude : '',
+            longitude : ''
         };
         this.handleViewPropertyDetails = this.handleViewPropertyDetails.bind(this);
         this.clickHandler = this.clickHandler.bind(this)
@@ -30,27 +33,33 @@ class Recommendations extends Component {
 
     componentWillReceiveProps(nextProps) 
     {
-        console.log("fetch flag in search results " + nextProps.fetchproperty.length)
+        console.log("Fetch flag in search results " + nextProps.fetchproperty.length)
     }
 
-    async componentDidMount(){
 
-        await axios.get('http://localhost:3001/getevents')
+    async componentDidMount(){
+        const values = {
+            latitude : localStorage.getItem('Latitude'),
+            longitude : localStorage.getItem('Longitude'),
+        }
+        console.log("values" + values.latitude + values.longitude)
+        await axios.post('http://localhost:3001/getevents', values)
         .then(response => {
             if(response.status == 200){
                 this.setState({
                     searched : true,
                     propertiesdata : this.state.propertiesdata.concat(response.data)
                 })
+                console.log(this.state.propertiesdata[1])
 
             }else{
                 this.setState({
                     searched : false
                 })
             }
-        })        
-        
+        })   
 
+        console.log(this.state.propertiesdata)
         if(this.state.propertiesdata.length === 0)
         {   
             swal("No data found","Please recheck your search criteria","warning")
@@ -80,53 +89,6 @@ class Recommendations extends Component {
         this.props.fetchpropertydetails(values);
     }
 
-
-//     handlebedroomfilter =  (e) => {
-//    /*      console.log(e.target.value)
-//         if(e.target.value)
-//         {
-//         let filteredresult = _.filter(this.state.propertiesdata, property => property.bedroom <= (e.target.value))
-//         console.log("Filtered result " + JSON.stringify(filteredresult))
-//         this.setState({
-//             bedroomfilter : e.target.value,
-//             propertiesdata: filteredresult
-//         })
-//         }
-//         else{
-//             this.setState({ 
-//                 propertiesdata : this.state.propertiesdata.concat(this.props.searchresults.data)
-//             })
-           
-//         } */
-//         this.setState({
-//             bedroomfilter : e.target.value,
-//         })
-//     }
-
-    // handlepricefilter = (e) => {
-    //     this.setState({
-    //         pricefilter : e.target.value,
-    //     })
-    // }
-
-    // handleFilter = (e) => {
-    //     console.log(this.state.pricefilter +" "+ this.state.bedroomfilter)
-    //     if(this.state.pricefilter && this.state.bedroomfilter)
-    //     {
-
-    //     let filteredresult = _.filter(this.state.propertiesdata, property => (property.bedroom <= this.state.bedroomfilter) && (property.baserate <= this.state.pricefilter))
-    //     console.log("Filtered result " + JSON.stringify(filteredresult))
-    //     this.setState({
-    //         propertiesdata: filteredresult
-    //     })
-    //     }
-    //     else{
-    //         this.setState({ 
-    //             propertiesdata : this.state.propertiesdata.concat(this.props.searchresults.data)
-    //         })
-           
-    //     } 
-    // }
 
     clickHandler(event) {
         this.setState({
@@ -173,12 +135,8 @@ class Recommendations extends Component {
                     </div>
 
                     <div class="column right container container-traveler">
-                    <div><td><h3><Link to = "/viewproperty" onClick = {this.handleViewPropertyDetails.bind(this,data._id)}> {data.headline} </Link></h3></td></div>
-                    <div><td>{data.type}</td></div>
-                    {/* <div><td>{data.description}</td></div> */}
-                    <div><td>No of bathrooms: {data.bathroom}</td></div>
-                    <div><td>No of bedrooms :{data.bedroom}</td></div>
-                    <div><td>Base Rate : {data.baserate}</td></div>
+                    <div><td><h3><Link to = "/viewevent" onClick = {this.handleViewPropertyDetails.bind(this,data._id)}> {data.eventname} </Link></h3></td></div>
+                    <div><td>&nbsp;&nbsp;{data.eventcitystate}</td></div>
                     </div>
                     </div>
 

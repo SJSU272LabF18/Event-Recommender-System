@@ -53,7 +53,7 @@ class Main extends Component {
                 <Route path="/pricing" component={OwnerPricing}/>
                 <Route path="/currency" component={OwnerCurrency}/>
                 <Route path="/searchresults" component={SearchResults}/>
-                <Route path="/viewproperty" component={TravelerPropertyDetails}/>
+                <Route path="/viewevent" component={TravelerPropertyDetails}/>
                 <Route path="/mytrips" component={MyTrips}/>
                 <Route path="/ownerdashboard" component={OwnerDashboard}/>
                 <Route path="/travelerinboxlistings" component={TravelerInboxListings}/>

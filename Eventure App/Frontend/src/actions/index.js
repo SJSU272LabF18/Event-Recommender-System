@@ -205,7 +205,7 @@ export const searchProperties =  (values) => async dispatch =>  {
   console.log("inside search properties")
   axios.defaults.withCredentials = true;
     const res = await axios
-    .post(`${ROOT_URL}/searchproperties`, values)
+    .post(`${ROOT_URL}/searchevents`, values)
     /* .then(res  => { */
       console.log("res status" +  res.status ); 
       if(res.status === 200){ 
@@ -233,7 +233,7 @@ export const fetchpropertydetails =  (values) => async dispatch =>  {
   console.log("inside fetch particular property")
   axios.defaults.withCredentials = true;
     const res = await axios
-    .get(`${ROOT_URL}/fetchpropertydetails/`+ values)
+    .get(`${ROOT_URL}/fetcheventdetails/`+ values)
     /* .then(res  => { */
       console.log("res status" +  res.status ); 
       if(res.status === 200){ 
@@ -417,7 +417,7 @@ export const postEvent =  (values) => async dispatch =>  {
   console.log("inside submit profile")
   axios.defaults.withCredentials = true;
     const res = await axios
-    .post(`${ROOT_URL}/updateevent`, values)
+    .post(`${ROOT_URL}/postevent`, values)
     /* .then(res  => { */
       console.log("res profile" +  res.status ); 
       console.log(res)

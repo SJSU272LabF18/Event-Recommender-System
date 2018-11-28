@@ -23,11 +23,12 @@ class HostEvent extends Component {
             starttime : null,
             eventduration : null,
             eventvenue : null,
-            eventcity : null,
-            eventstate : null,
+            eventcitystate : null,
+            // eventstate : null,
             eventzip : null,
             eventcountry : null,
             eventflag : false,
+            count : '',
             images : ''
         };
     };
@@ -49,11 +50,11 @@ class HostEvent extends Component {
                                 eventdate : event.eventdate,
                                 starttime : event.starttime,
                                 eventduration : event.duration,
-                                eventvenue : event.venue,
-                                eventcity : event.city,
-                                eventstate : event.state,
-                                eventzip : event.zip,
-                                eventcountry : event.country,
+                                eventvenue : event.eventvenue,
+                                eventcitystate : event.eventcitystate,
+                                // eventstate : event.eventstate,
+                                eventzip : event.eventzip,
+                                eventcountry : event.eventcountry,
                                 images : event.images
                             }
                         );
@@ -99,16 +100,16 @@ class HostEvent extends Component {
             eventvenue : e.target.value
         })
     }
-    handleEventCity = (e) => {
+    handleEventCityState = (e) => {
         this.setState({
-            eventcity : e.target.value
+            eventcitystate : e.target.value
         })
     }
-    handleEventState = (e) => {
-        this.setState({
-            eventstate : e.target.value
-        })
-    }
+    // handleEventState = (e) => {
+    //     this.setState({
+    //         eventstate : e.target.value
+    //     })
+    // }
     handleEventZip = (e) => {
         this.setState({
             eventzip : e.target.value
@@ -133,7 +134,12 @@ class HostEvent extends Component {
           this.setState({ 
               [e.target.name]: e.target.value
         });
+    
+        }   
+    }
+  
 
+    handleCreateEvent= async (e) => {
         const { description, selectedFile} = this.state;
         let formData = new FormData();
         formData.append('description', description);
@@ -142,41 +148,68 @@ class HostEvent extends Component {
         formData.append('selectedFile', selectedFile[i]);
         }
   
-          axios.post('http://localhost:3001/photos', formData)
+          await axios.post('http://localhost:3001/photos', formData)
             .then((result) => {
                 if (result.status===200)
                 {
                     this.setState({
                         eventflag : true,
-                        images : result.data        //name of file
+                        images : result.data       //name of file
                     })
                 }
-
             });
-    
-        }   
-    }
-  
-
-    handleCreateEvent= (e) => {
-
+            console.log("images" + this.state.images)
         var values = {
             eventname :  this.state.eventname,
             eventdescription : this.state.eventdescription,
             eventdate : this.state.eventdate,
             starttime : this.state.starttime,
-            duration : this.state.duration,
-            venue : this.state.venue,
-            city : this.state.city,
-            state : this.state.state,
-            zip : this.state.zip,
-            country : this.state.country,
+            eventduration : this.state.eventduration,
+            eventvenue : this.state.eventvenue,
+            eventcitystate : this.state.eventcitystate,
+            // eventstate : this.state.eventstate,
+            eventzip : this.state.eventzip,
+            eventcountry : this.state.eventcountry,
             images : this.state.images
         }
         
         this.props.postEvent(values);
+
+
         
     
+        
+    }
+
+    handlePredictCount = async (e) => {
+        // Without "this"
+        var i;
+        for( i = 0 ; i < 4000; i++)
+        {
+            console.log("")
+        }
+        await axios.get('http://localhost:3001/getcount')
+        .then(response => {
+            if(response.status == 200){
+                this.setState({
+                    searched : true,
+                    count : response.data[0].count
+                })
+                console.log(this.state.count)
+                if(this.state.count){
+                    swal("" , "Current predicted count:" + this.state.count,"success");
+                  }
+                else{
+                    swal("Oops!Something went wrong", "","error");
+                  } 
+
+            }else{
+                this.setState({
+                    searched : false
+                })
+            }
+        })   
+
         
     }
 
@@ -196,7 +229,7 @@ class HostEvent extends Component {
         let EventDetails = this.state.eventData.map(event => {
             return(
                 <form>
-                <div className = "profile-form-inner">
+                <div className = "host-form-inner">
                     <h3>Host New Event</h3>
                  
                 <div>
@@ -215,20 +248,20 @@ class HostEvent extends Component {
                 </div>
 
                 <div>
-                    <input type="text" onChange = {this.handleEventDescription} class="form-control input-lg js-input-field" id="hostEventDuration" placeholder="Event Duration" value={this.state.eventduration}></input>
+                    <input type="text" onChange = {this.handleEventDuration} class="form-control input-lg js-input-field" id="hostEventDuration" placeholder="Event Duration" value={this.state.eventduration}></input>
                 </div>
                 <div className = "profile-form-inner"></div>
                     <h3>Venue Details</h3>
 
-                <div>
+                {/* <div>
                     <input type="text" onChange = {this.handleEventVenue} class="form-control input-lg js-input-field" id="eventVenue" placeholder="Venue Details" value={this.state.eventvenue}></input>
-                </div>
+                </div> */}
                 <div>
-                    <input type="text" onChange = {this.handleEventCity} class="form-control input-lg js-input-field" id="eventCity" placeholder="City" value={this.state.eventcity}></input>
+                    <input type="text" onChange = {this.handleEventCityState} class="form-control input-lg js-input-field" id="eventCityState" placeholder="City,State" value={this.state.eventcitystate}></input>
                 </div>
-                <div>
+                {/* <div>
                     <input type="text" onChange = {this.handleEventState} class="form-control input-lg js-input-field" id="eventState" placeholder="State" value={this.state.eventstate}></input>
-                </div>
+                </div> */}
                 <div>
                     <input type="text" onChange = {this.handleEventZip} class="form-control input-lg js-input-field" id="eventZip" placeholder="Zip code" value={this.state.eventzip}></input>
                 </div>
@@ -253,10 +286,16 @@ class HostEvent extends Component {
             </div>
 
             <div>
-            <button onClick = {this.handleCreateName} class="btn btn-primary btn-md searchbox-submit save-btn" type="button" tabindex="5">
+            <button onClick = {this.handlePredictCount} class="btn btn-primary btn-md searchbox-submit save-btn" type="button" tabindex="5">
+            Predict Attendees
+            </button>
+            <button onClick = {this.handleCreateEvent} class="btn btn-primary btn-md searchbox-submit save-btn" type="button" tabindex="5">
             Create Event
             </button>
             </div>
+
+
+  
 
             </form>
             )
@@ -283,11 +322,11 @@ class HostEvent extends Component {
 
 }
 
-const mapStateToProps = state =>{
-    console.log("mstp" + state.profilereducer.profileUpdated);
-    return {
-        profileUpdated : state.profilereducer.profileUpdated
-    }
-}
+// const mapStateToProps = state =>{
+//     console.log("mstp" + state.eventreducer.eventUpdated);
+//     return {
+//         eventUpdated : state.eventreducer.eventUpdated
+//     }
+// }
 
-export default connect(mapStateToProps, {postEvent})(HostEvent);
+export default connect(null, {postEvent})(HostEvent);

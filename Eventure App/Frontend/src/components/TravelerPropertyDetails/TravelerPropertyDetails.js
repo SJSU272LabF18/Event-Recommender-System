@@ -19,38 +19,38 @@ class TravelerPropertyDetails extends Component {
     constructor(props){
         super(props);  
         this.state = {
-      //      propertyData : [],
-            imageView : [],
+           propertyData : [],
+            //  : [],
             message : []
 
         };
         
     }
 
-    componentWillReceiveProps(nextProps) {
-            console.log(" Fetch flag" + nextProps.fetchFlag);
+    // componentWillReceiveProps(nextProps) {
+    //         console.log(" Fetch flag" + nextProps.fetchFlag);
 
-                var photoList = nextProps.propertyData[0].picturelist.split(',');
+    //             var photoList = nextProps.propertyData[0].picturelist.split(',');
       
-                var imageArr = [];
-                for (let i = 0; i < photoList.length; i++) {
-                  axios.post('http://localhost:3001/download/' + photoList[i])
-                      .then(response => {
-                          //console.log("Image Res : ", response);
-                          let imagePreview = 'data:image/jpg;base64, ' + response.data;
-                           imageArr.push(imagePreview); 
-                         /*  const propertyArr = this.state.Properties.slice();
-                          propertyArr[i].Photos = imagePreview; */
-                          this.setState({
-                              /* Properties: propertyArr, */
-                            imageView : imageArr
-                          });
-                      }); 
-              }
-            /* }  */   
+    //             var imageArr = [];
+    //             for (let i = 0; i < photoList.length; i++) {
+    //               axios.post('http://localhost:3001/download/' + photoList[i])
+    //                   .then(response => {
+    //                       //console.log("Image Res : ", response);
+    //                       let imagePreview = 'data:image/jpg;base64, ' + response.data;
+    //                        imageArr.push(imagePreview); 
+    //                      /*  const propertyArr = this.state.Properties.slice();
+    //                       propertyArr[i].Photos = imagePreview; */
+    //                       this.setState({
+    //                           /* Properties: propertyArr, */
+    //                          : imageArr
+    //                       });
+    //                   }); 
+    //           }
+    //         /* }  */   
 
 
-          }
+    //       }
 
         componentWillMount(){
             console.log("Token in did mount" + localStorage.getItem("usertoken"))
@@ -86,7 +86,7 @@ class TravelerPropertyDetails extends Component {
                     
                 }) */
  /*                console.log("prop data in cdm" + this.props.propertyData);
-                 console.log("piclist book now" + this.props.propertyData[0].picturelist.split(',')); */
+                 console.log("piclist " + this.props.propertyData[0].picturelist.split(',')); */
             //     var photoList = this.props.propertyData[0].picturelist.split(',');
       
             //     var imageArr = [];
@@ -100,7 +100,7 @@ class TravelerPropertyDetails extends Component {
             //               propertyArr[i].Photos = imagePreview; */
             //               this.setState({
             //                   /* Properties: propertyArr, */
-            //                 imageView : imageArr
+            //                  : imageArr
             //               });
             //           }); 
             //   }
@@ -163,58 +163,36 @@ sendMessageHandler = async (e) => {
 
     render()
     {
-        let imageArray = this.state.imageView.map((value) => {
-            return(
-                <p><img src={value}></img></p>
-            )
-        })
+        // let imageArray = this.state.imageView.map((value) => {
+        //     return(
+        //         <p><img src={value}></img></p>
+        //     )
+        // })
         console.log("fetchFlag" + this.props.fetchFlag)
-        let detailsright = this.props.propertyData.map((property,i) => {
+        let detailsright = this.props.propertyData.map((event,i) => {
             return(
                 <div props-div>
                 <div className = "book-now-props">
-                <div className = "list-props props-group-traveler-book-now">
+                <div className = "container list-props props-group-traveler-book-now">
                     <div>
-                     <h2>{property.baserate}$</h2>
-                     Per Night
+                     <h2>{event.eventname}</h2>
                       </div>
-                      <br></br>
-
-                    <div className = "props-group-traveler">
-                    <h3> 
-                    {property.headline}
+                      <h3> 
+                        {event.eventcitystate}
                     </h3>
-                    </div>
+                    <h2><small className="text-muted">{event.eventcountry}</small></h2>
+                    <div className = "props-group-traveler-book-now">
+                    <div><b>Event date</b> : {event.eventdate}</div>
+                    <div><b>Event start time</b> : {event.starttime}</div>
+                    <div><b>Duration</b> : {event.eventduration}</div>
+                    <div><b>Details</b> : {event.eventdescription}</div>
 
                     <br></br>
-                    <table className = "traveler-table">
 
-                    <tr>
-                    <div className = "props-group-traveler"> 
-                    <td>Check-in </td>
-                    <td>Check-out </td>
-                   
+
                     </div>
-
-                    <div className = "props-group-traveler">
-                    <td>{this.props.searchInputStartDate}</td>
-                    <td>{this.props.searchInputEndDate} </td>
-                     </div>
-                    
-                    </tr>
-
-                    <tr>
-                    <div className = "props-group-traveler"> 
-                    <td>Number of guests</td>
-                    <td>{this.props.searchaccomodates}</td>
-                    </div>
-                    </tr>
-
-                    </table>
-                    <br></br>
-                    
                     <div>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick = {this.handleBookNow} onclick="toggle_visibility('foo')" className="btn btn-primary btn-md searchbox-submit save-btn" type="button" tabindex="5">Book Now</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onClick = {this.handleBookNow} onclick="toggle_visibility('foo')" className="btn btn-primary btn-md searchbox-submit save-btn" type="button" tabindex="5">Interested</button>
                     </div>
                     <br/><br/>
 
@@ -225,7 +203,7 @@ sendMessageHandler = async (e) => {
 
                     <div>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <Link to = "#" onClick = {this.sendMessageHandler} > Ask Owner a Question</Link>
+                    <Link to = "#" onClick = {this.sendMessageHandler} > Send your queries to host </Link>
                     </div>
 
                 </div>
@@ -240,7 +218,7 @@ sendMessageHandler = async (e) => {
             return(
                 <div props-div>
                 <div className = "take-to-left">
-                <div classname= "upper-table">
+                {/* <div classname= "upper-table">
                 <table className = "traveler-table">
 
                     <tr>
@@ -264,7 +242,7 @@ sendMessageHandler = async (e) => {
 
                 </table>
                 
-                </div>
+                </div> */}
 
                 <div className = "book-now-props">
                 <div className = "desc">
@@ -301,10 +279,10 @@ sendMessageHandler = async (e) => {
             <NavBarBlue></NavBarBlue>
             <div  class="row jumbotron jumbotron-traveler">
             <div class="column left1">
-                <Carousel showThumbs={false} className = "carousel">
+                {/* <Carousel showThumbs={false} className = "carousel">
                 {imageArray}
-                </Carousel>
-                {detailsleft}
+                </Carousel> */}
+                {/* {detailsleft} */}
             </div>
                 <div class="column right1 container container-traveler">
                 {detailsright}  
@@ -323,10 +301,10 @@ const mapStateToProps = state =>{
     console.log("state" + state.fetchpropertyreducer.fetchFlag)
     return {
         fetchFlag : state.fetchpropertyreducer.fetchFlag,
-        propertyData : state.fetchpropertyreducer.fetchproperty,
-        searchInputStartDate : state.searchpropertiesreducer.searchinput.start_date,
-        searchInputEndDate : state.searchpropertiesreducer.searchinput.end_date,
-        searchaccomodates :  state.searchpropertiesreducer.searchinput.accomodates
+        propertyData : state.fetchpropertyreducer.fetchproperty
+        // searchInputStartDate : state.searchpropertiesreducer.searchinput.start_date,
+        // searchInputEndDate : state.searchpropertiesreducer.searchinput.end_date,
+        // searchaccomodates :  state.searchpropertiesreducer.searchinput.accomodates
     }
 }
 

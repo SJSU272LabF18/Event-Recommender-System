@@ -1,36 +1,42 @@
 var mongoose = require('mongoose');
 
 var Events = mongoose.model('Events',{
+    oemaild : {
+        type : String
+    }, 
     eventname :{
         type : String
     },
-    eventdesc :{
+    eventdescription :{
         type : String
     },
     eventdate :{
         type : String
     },
-    eventstarttime :{
+    starttime :{
         type : String
     },
     eventduration :{
         type : String
     },
-    venuedetails :{
+    eventvenue :{
         type : String
     },
-    venuecity :{
+    eventcitystate :{
         type : String
     },
-    venuestate :{
+    // eventstate :{
+    //     type : String
+    // },
+    eventzipcode :{
         type : String
     },
-    venuezipcode :{
+    eventcountry :{
         type : String
     },
-    venuecountry :{
+    picturelist : {
         type : String
-    }
+    },
 });
 
 module.exports = {Events};

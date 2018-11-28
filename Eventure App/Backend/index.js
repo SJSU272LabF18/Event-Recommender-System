@@ -143,13 +143,16 @@ Users.findOne({
         console.log("Inside sign up")
         var salt = bcrypt.genSaltSync(10);
         var encryptedpassword = bcrypt.hashSync(req.body.password, salt);
+        console.log(req.body.count)
         var user = new Users({
             emailid : req.body.emailid,
             password : encryptedpassword,
             firstname : req.body.firstname,
             lastname : req.body.lastname,
             usertype : req.body.usertype,
-            profilepic : req.body.profilepic
+            count : req.body.count,
+            profilepic : req.body.profilepic,
+
         })
 
         user.save().then((user) => {
@@ -423,7 +426,7 @@ app.get('/getProfile', function(req,res){
 // //     } 
 // //     else{
 // //                 res.code = "200";
-// //                 res.value = results.value;
+// //                 res.value = results.value;ENT
 // //                 res.sendStatus(200).end();
 // //         }
     
@@ -437,29 +440,29 @@ app.get('/getProfile', function(req,res){
             console.log("Inside create event") 
             console.log("session: " , req.session.user)
             console.log(req.body.eventname)  
-            console.log(req.body.eventdesc)  
+            console.log(req.body.eventdescription)  
             console.log(req.body.eventdate)  
             console.log(req.body.starttime)  
             console.log(req.body.eventduration)  
-            console.log(req.body.venuedetails)  
-            console.log(req.body.venuecity) 
-            console.log(req.body.venuestate) 
-            console.log(req.body.venuezipcode)  
-            console.log(req.body.venuecountry)   
+            // console.log(req.body.eventvenue)  
+            console.log(req.body.eventcitystate) 
+            console.log(req.body.images) 
+            console.log(req.body.eventzipcode)  
+            console.log(req.body.eventcountry)   
 
 
         var event = new Events({
             oemailid : req.session.user.emailid,
-            address : req.body.eventname,
-            headline : req.body.eventdesc,
-            type : req.body.eventdate,
-            description : req.body.starttime,
-            bedroom : req.body.eventduration,
-            accomodate : req.body.venuedetails,
-            bathroom : req.body.venuecity,
-            availablestartdate : req.body.venuestate,
-            availableenddate : venuezipcode,
-            baserate : venuecountry,
+            eventname : req.body.eventname,
+            eventdescription : req.body.eventdescription,
+            eventdate : req.body.eventdate,
+            starttime : req.body.starttime,
+            eventduration : req.body.eventduration,
+            eventvenue : req.body.eventvenue,
+            eventcitystate : req.body.eventcitystate,
+            // eventstate : req.body.eventstate,
+            eventzipcode : req.body.eventzipcode,
+            eventcountry : req.body.eventcountry,
             picturelist : req.body.images
         })
                 event.save()
@@ -469,59 +472,21 @@ app.get('/getProfile', function(req,res){
                 },(err) =>{
                     res.sendStatus(400).end();
                 }) 
-//     //=========Kafka============
-//     var msg = {
-//         oemailid : req.session.user.emailid,
-//         address : req.body.address,
-//         state : req.body.state,
-//         country : req.body.country,
-//         street : req.body.street,
-//         zipcode : req.body.zipcode,
-//         headline : req.body.headline,
-//         type : req.body.type,
-//         description : req.body.description,
-//         bedroom : req.body.bedroom,
-//         accomodate : req.body.accomodate,
-//         bathroom : req.body.bathroom,
-//         availablestartdate : req.body.startdate,
-//         availableenddate : req.body.enddate,
-//         baserate : req.body.baserate,
-//         picturelist : req.body.images
-//     }
-
-//     console.log("--Inside add property--");
-//     kafka.make_request('addproperty',msg, function(err,results){
-//     console.log('in result');
-//     console.log(results);
-//     if (err){
-//         console.log("Inside err");
-//         res.json({
-//             status:"error",
-//             msg:"System Error, Try Again."
-//         })
-//     } 
-//     else{
-//                 res.code = "200";
-//                 res.value = results.value;
-//                 res.sendStatus(200).end();
-//         }
-    
-// });
 
  });
 
 
 
-app.post('/searchproperties',  async function(req,res){
-    console.log("Inside search" + req.body.start_date);
+app.post('/searchevents',  async function(req,res){
+    console.log("Inside search" + req.body.eventstartdate + req.body.eventcitystate );
 
-      Properties.find(
+      Events.find(
           {$and: [
-                {address : req.body.destination},
-                {availablestartdate : {$gte : req.body.start_date}}, 
+                {eventcitystate : req.body.eventcitystate},
+                {eventdate : {$gte : req.body.eventstartdate}}, 
             ]
         }, 
-        function(err, properties) 
+        function(err, events) 
         {
             if (err)
             {
@@ -529,8 +494,43 @@ app.post('/searchproperties',  async function(req,res){
             }
             else
             {
-                console.log("Searched properties " + properties);
-                res.status(200).send(JSON.stringify(properties))
+                console.log("Searched events " + events);
+                res.status(200).send(JSON.stringify(events))
+            }
+        });
+    
+})
+
+//Recommendeded events
+app.post('/getevents',  async function(req,res){
+    console.log("Inside search" + req.body.latitude + " " + req.body.longitude + req.session.user.emailid);
+
+    const includeEvents = await Users.find
+    ({
+        emailid : req.session.user.emailid,
+      },
+       {pastevents : 1, _id: 0}
+      )
+
+      var includedEvents = (includeEvents[0].pastevents.replace(/ /g,''))
+    //  console.log(includedEvents.replace(/ /g,''))
+      var includeEventsArray = []
+      includeEventsArray = includedEvents.split(',');
+      console.log(includeEventsArray)
+      
+      Events.find(
+        {_id : {$in : includeEventsArray}}, 
+        function(err, events) 
+        {
+            if (err)
+            {
+                console.log(err)
+                res.send(err);
+            }
+            else
+            {
+                console.log("Searched events " + events);
+                res.status(200).send(JSON.stringify(events))
             }
         });
     
@@ -539,46 +539,68 @@ app.post('/searchproperties',  async function(req,res){
 //Get events
 app.get('/getevents',  function(req,res){
 
-      Properties.find({
-        }, 
-        function(err, properties) 
-        {
-            if (err)
-            {
-                res.send(err);
-            }
-            else
-            {
-                console.log("Searched events " + properties);
-                res.status(200).send(JSON.stringify(properties))
-            }
-        });
-    
+    Events.find({
+
+      },
+      function(err, events) 
+      {
+          if (err)
+          {
+              res.send(err);
+          }
+          else
+          {
+              console.log("Searched events " + events);
+              res.status(200).send(JSON.stringify(events))
+          }
+      });
+  
+})
+
+//Get events
+app.get('/getcount',  function(req,res){
+
+    Users.find({
+        emailid : req.session.user.emailid
+      },
+      function(err, user) 
+      {
+          if (err)
+          {
+              res.send(err);
+          }
+          else
+          {
+              console.log("Current user " + user);
+              res.status(200).send(JSON.stringify(user))
+          }
+      });
+  
 })
 
 
 // //fetch particular property
-app.get('/fetchpropertydetails/:pid', function(req,res){
-    //===============Without Kafka ===================
-    console.log("inside fetch property details")
-    Properties.find(
-        {
-            _id : req.params.pid
-        }
-    )
-    .then((property)=>
-    {
-    console.log("Property fetched: " + property);
-    res.writeHead(200,{
-        'Content-Type' : 'application/json'
-    })
-    res.end(JSON.stringify(property));
-    },(err) => {
-    res.writeHead(400,{
-        'Content-Type' : 'text/plain'
-    })
-    res.end("Invalid property");
-    })
+// app.get('/fetchpropertydetails/:pid', function(req,res){
+//     //===============Without Kafka ===================
+//     console.log("inside fetch property details")
+//     Properties.find(
+//         {
+//             _id : req.params.pid
+//         }
+//     )
+//     .then((property)=>
+//     {
+//     console.log("Property fetched: " + property);
+//     res.writeHead(200,{
+//         'Content-Type' : 'application/json'
+//     })
+//     res.end(JSON.stringify(property));
+//     },(err) => {
+//     res.writeHead(400,{
+//         'Content-Type' : 'text/plain'
+//     })
+//     res.end("Invalid property");
+//     })
  
 // //================Kafka=============================
 
@@ -604,7 +626,32 @@ app.get('/fetchpropertydetails/:pid', function(req,res){
         
 //     });
 
- });
+ //});
+
+ //=====================Get particular event details===============
+ app.get('/fetcheventdetails/:pid', function(req,res){
+    //===============Without Kafka ===================
+    console.log("inside fetch event details" + req.params.pid)
+    Events.find(
+        {
+            _id : req.params.pid
+        }
+    )
+    .then((event)=>
+    {
+    console.log("Event fetched: " + event);
+    res.writeHead(200,{
+        'Content-Type' : 'application/json'
+    })
+    res.end(JSON.stringify(event));
+    },(err) => {
+    res.writeHead(400,{
+        'Content-Type' : 'text/plain'
+    })
+    res.end("Invalid property");
+    })
+
+ })
 
 app.post('/addBooking',function(req,res){
 //===================Without Kafka=======================

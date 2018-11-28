@@ -17,6 +17,10 @@ import img1 from '../../images/presentation.svg'
 import img2 from '../../images/like.svg'
 import img3 from '../../images/reading.svg'
 import NavBarBlue from '../NavBarBlue/NavBarBlue';
+import Demo from './Demo';
+import {geolocated} from 'react-geolocated';
+// import { GoogleComponent } from 'react-google-location'
+// const API_KEY = 'AIzaSyAno9izUtTTVDf8zeaElje_wXSHs28j3-4'
 
 //create the Landing Component
 class HomePage extends Component {
@@ -147,9 +151,12 @@ class HomePage extends Component {
     render(){
         let redirectVar = null;
         let redirectVarOwner = null;
+
         if(this.props.searchFlag===true){
             redirectVar = <Redirect to= "/searchresults"/>
         }
+
+        
 /*         if(this.state.usertype === "traveler"){
             redirectVarOwner = <Redirect to = "/ownerlogin"/>
         } 
@@ -291,8 +298,8 @@ class HomePage extends Component {
           <img className="second-slide" src={event2} alt="Second slide"/>
           <div className="container">
             <div className="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1></h1>
+              <p></p>
             </div>
           </div>
         </div>
@@ -300,8 +307,8 @@ class HomePage extends Component {
           <img className="third-slide" src={event3} alt="Third slide"/>
           <div className="container">
             <div className="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h1></h1>
+              <p></p>
             </div>
           </div>
         </div>
@@ -322,22 +329,22 @@ class HomePage extends Component {
 <div className="row">
   <div className="col-lg-4">
   <img className="img-circle" src={img1} alt="Generic placeholder image" width="140" height="140"/>
-    <h2>Host an Event</h2>
+    <h2>Host or Predict Interest</h2>
     <p>In the mood for hosting a party, talk show, workshop, concert, or any event? We got it all covered for you!
-    "MeetUps" provides an excellent platform to host events. To top it up, we provide you with an estimate of the attendance for the event which can help you plan much better! Go ahead and try our unique feature.</p>
+    "Evento" provides an excellent platform to host events. To top it up, we provide you with an estimate of the attendance for the event which can help you plan much better! Go ahead and try our unique feature.</p>
     <p><Link to="/hostevent" className="btn btn-default" href="#" role="button">Details &raquo;</Link></p>
   </div>
   <div className="col-lg-4">
   <img className="img-circle" src={img2} alt="Generic placeholder image" width="140" height="140"/>
     <h2>View Recommendations</h2>
     <p>Dive in for an ultimate experience of events specially handpicked for you. Through our efficient learning algorithm, we have come up with a method to recommend the best of the best events satisfying all your information.</p>
-    <p><Link to="/eventrecommendation" className="btn btn-default" href="#" role="button">Next &raquo;</Link></p>
+    <p><Link to="/eventrecommendation" className="btn btn-default" href="#" role="button">Details &raquo;</Link></p>
   </div>
   <div className="col-lg-4">
   <img className="img-circle" src={img3} alt="Generic placeholder image" width="140" height="140"/>
     <h2>Search Events</h2>
     <p>Attending an event is an opportunity to meet new people, network, improve business opportunities, and have fun. Do more of what you love! Adventure is just a click away. Explore the endless opportunities that MeetUp can offer you.</p>
-    <p><Link to="/searchevent" className="btn btn-default" href="#" role="button">Next &raquo;</Link></p>
+    <p><Link to="/searchevent" className="btn btn-default" href="#" role="button">Details &raquo;</Link></p>
   </div>
 </div>
 
@@ -345,8 +352,8 @@ class HomePage extends Component {
 
 <div className="row featurette">
   <div className="col-md-7">
-    <h2 className="featurette-heading">First featurette heading. <span className="text-muted">It'll blow your mind.</span></h2>
-    <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 className="featurette-heading"> Predict interested users </h2>
+    <p className="lead">If you are thinking of hosting an event, let Evento predict the number of users interested in your event, so that you can plan your event better. Evento uses Machine Learning to do the prediction. Just enter the details of the event you are thinking of hosting and click on "Predict"</p>
   </div>
   <div className="col-md-5">
     <img className="featurette-image img-responsive center-block" src={event1} alt="Generic placeholder image" />
@@ -357,8 +364,8 @@ class HomePage extends Component {
 
 <div className="row featurette">
   <div className="col-md-7 col-md-push-5">
-    <h2 className="featurette-heading">Oh yeah, it's that good. <span className="text-muted">See for yourself.</span></h2>
-    <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 className="featurette-heading">View tailored Recommendations <span className="text-muted">See for yourself.</span></h2>
+    <p className="lead">Based on the kind of events you usually like to attend, our recommendation engine suggests upcoming events for you, that fit your taste</p>
   </div>
   <div className="col-md-5 col-md-pull-7">
     <img className="featurette-image img-responsive center-block" src={event2} alt="Generic placeholder image"/>
@@ -369,8 +376,9 @@ class HomePage extends Component {
 
 <div className="row featurette">
   <div className="col-md-7">
-    <h2 className="featurette-heading">And lastly, this one. <span className="text-muted">Checkmate.</span></h2>
-    <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 className="featurette-heading">And lastly, search events. <span className="text-muted"></span></h2>
+    <p className="lead">The good old Search bar allows you to search events taking place around you
+</p>
   </div>
   <div className="col-md-5">
     <img className="featurette-image img-responsive center-block" src={event3} alt="Generic placeholder image"/>
@@ -382,6 +390,7 @@ class HomePage extends Component {
 
 
       <footer>
+          <Demo/>
         <p className="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>

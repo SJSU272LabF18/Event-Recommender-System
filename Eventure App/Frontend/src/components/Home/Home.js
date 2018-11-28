@@ -40,10 +40,10 @@ class Home extends Component {
     searchResultsHandler = async (e) => {
         var searchData = []
         var values = {
-            destination : this.state.destination,
-            start_date : this.state.start_date,
-            end_date : this.state.end_date,
-            accomodates : this.state.accomodates
+            eventcitystate : this.state.destination,
+            eventstartdate : this.state.start_date,
+            // end_date : this.state.end_date,
+            // accomodates : this.state.accomodates
         }
         console.log("Inside search results")
 
@@ -89,17 +89,17 @@ class Home extends Component {
         })
     }
 
-    handleEndDate = (e) => {
-        this.setState({
-            end_date : e.target.value
-        })
-    }
+    // handleEndDate = (e) => {
+    //     this.setState({
+    //         end_date : e.target.value
+    //     })
+    // }
 
-    handleAccomodates = (e) => {
-        this.setState({
-            accomodates : e.target.value
-        })
-    }
+    // handleAccomodates = (e) => {
+    //     this.setState({
+    //         accomodates : e.target.value
+    //     })
+    // }
 
     handlerListProperties = (e) => {
 
@@ -182,7 +182,7 @@ class Home extends Component {
 
             {/* <div className="row"> */}
 
-                <div className="left-class">
+                {/* <div className="left-class">
                 <h4><font color="white"><b>Customize your selection</b></font></h4>
                 <p><font color="white">Choose an event tailored to suit your interests</font><br/><font color="white">Navigate to view recommendations page</font></p>
                 </div>
@@ -195,7 +195,7 @@ class Home extends Component {
                 <div className="right-class">
                     <h4 ><font color="white"><b>Host Events your way</b></font></h4>
                     <p><font color="white">Get all your alerts at one place, whether it is for an event your friend invited you to or it is from MeetUps itself.</font></p>       
-                </div>
+                </div> */}
 
          {/*    </div> */}
             

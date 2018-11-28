@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import homeawaylogo_blue from '../../images/logo-bceheader-blue.svg'
 import birhouselogo_blue from '../../images/birdhouse-bceheader-blue.svg'
-import sjsu_gold_logo from '../../images/sjsu-logo-gold.png'
+import sjsu_gold_logo from '../../images/eventologo.png'
 
 
 //create the Landing Component

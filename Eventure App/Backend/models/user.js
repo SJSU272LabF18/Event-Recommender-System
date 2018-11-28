@@ -42,7 +42,19 @@ var Users = mongoose.model('Users',{
     },
     profilepic : {
 		type : String
-    }
+    },
+    user_latitide: {
+        tpe : String
+    },
+    user_longitude : {
+        type : String
+    },
+    pastevents : {
+        type : String
+    },
+    count : {
+        type : String
+    },
 });
 
 module.exports = {Users};

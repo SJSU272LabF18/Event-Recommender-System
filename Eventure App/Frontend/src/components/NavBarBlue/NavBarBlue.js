@@ -94,7 +94,7 @@ class NavBar extends Component {
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="/homepage">SJSU MeetUps</a>
+                <Link to="/homepage" className="navbar-brand">Evento</Link>
                 </div>
                 <div id="navbar" className="navbar-collapse collapse">
                 <ul className="nav navbar-nav">

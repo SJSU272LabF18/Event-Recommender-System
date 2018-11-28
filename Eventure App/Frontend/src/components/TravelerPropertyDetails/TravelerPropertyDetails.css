@@ -85,3 +85,7 @@ container .container-traveler{
 .upper-table{
     margin-top:10px;
 }
+
+.container.list-props.props-group-traveler-book-now {
+    margin-top: 5%;
+}

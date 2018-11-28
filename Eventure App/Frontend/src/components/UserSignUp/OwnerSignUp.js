@@ -21,6 +21,7 @@ class OwnerSignUp extends Component{
             firstname : "",
             lastname : "",
             usertype : 'owner',
+            count : '',
             /* authFlag : false, */
             err : ''
         }
@@ -69,12 +70,16 @@ class OwnerSignUp extends Component{
     }
     //submit Login handler to send a request to the node backend
     handleOwnerSignup = (e) => {
+        function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1) + min);
+		  }
         const values = {
             emailid : this.state.emailid,
             password : this.state.password,
             firstname : this.state.firstname,
             lastname : this.state.lastname,
             usertype : this.state.usertype,
+            count : getRandomInt(1,10),
             profilepic : "avatar.png"
         }
         e.preventDefault();
@@ -111,7 +116,7 @@ class OwnerSignUp extends Component{
             <div className = "main-login">
             
             <div className="login-header text-center col-md-12 traveler">
-            <h1>Sign Up for HomeAway</h1>
+            <h1>Sign Up for Evento</h1>
             Already have an account?     
             <Link to="/ownerlogin">Log in</Link>
             </div>

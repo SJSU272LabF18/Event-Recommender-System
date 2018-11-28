@@ -50,7 +50,7 @@ class OwnerLogin extends Component{
             //redirect based on successful login
             let redirectVar = null;
             if(localStorage.getItem('usertoken') && this.props.authFlag === true){
-              redirectVar = <Redirect to= "/profile"/>
+              redirectVar = <Redirect to= "/homepage"/>
             } 
         return(
             <div>
@@ -59,7 +59,7 @@ class OwnerLogin extends Component{
             <div className = "main-login">
             
             <div className="login-header text-center col-md-12 traveler">
-            <h1>Log in to SJSU Meetups</h1>
+            <h1>Log in to Evento</h1>
             Need an account?     
             <Link to="/signup">Sign Up</Link>
             </div>

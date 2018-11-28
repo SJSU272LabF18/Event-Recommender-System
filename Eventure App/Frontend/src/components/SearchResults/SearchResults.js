@@ -170,12 +170,12 @@ class SearchResults extends Component {
                     </div>
 
                     <div class="column right container container-traveler">
-                    <div><td><h3><Link to = "/viewproperty" onClick = {this.handleViewPropertyDetails.bind(this,data._id)}> {data.headline} </Link></h3></td></div>
-                    <div><td>{data.type}</td></div>
+                    <div><td><h3><Link to = "/viewevent" onClick = {this.handleViewPropertyDetails.bind(this,data._id)}> {data.eventname} </Link></h3></td></div>
+                    <div><td>{data.eventdescription}</td></div>
                     {/* <div><td>{data.description}</td></div> */}
-                    <div><td>No of bathrooms: {data.bathroom}</td></div>
+                    {/* <div><td>No of bathrooms: {data.bathroom}</td></div>
                     <div><td>No of bedrooms :{data.bedroom}</td></div>
-                    <div><td>Base Rate : {data.baserate}</td></div>
+                    <div><td>Base Rate : {data.baserate}</td></div> */}
                     </div>
                     </div>
 
