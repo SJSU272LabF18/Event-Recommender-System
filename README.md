@@ -21,7 +21,8 @@ Technology: MongoDB/ CockroachDB, IBM bluemix, Machine Learning
 
 
 
-
+### Video: 
+https://youtu.be/XSQ5L0YCakY
 
 
 
