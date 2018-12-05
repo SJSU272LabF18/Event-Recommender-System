@@ -11,10 +11,10 @@ Through Evento you can create, predict number of attendees, find and attend even
 
 ### Proposed Solution:
 
-Datataset: https://www.kaggle.com/c/event-recommendation-engine-challenge
-Search operation: Show results for the keywords searched by users.
-Event hosting and prediction of count: Host events by entering event-details. View prediction of number of users interested in this event
-Event Recommendation: A logged-in user can view recommendations, which the application suggests based on the past events attended by user
++ Datataset: https://www.kaggle.com/c/event-recommendation-engine-challenge
++ Search operation: Show results for the keywords searched by users.
++ Event hosting and prediction of count: Host events by entering event-details. View prediction of number of users interested in this event
++ Event Recommendation: A logged-in user can view recommendations, which the application suggests based on the past events attended by user
 
 ### Technology: MongoDB-Express-React-NodeJS stack, IBM Watson Studio for Data Refinery and Machine Learning
 
