@@ -13,7 +13,8 @@ Through Evento you can create, predict number of attendees, find and attend even
 
 + Datataset: https://www.kaggle.com/c/event-recommendation-engine-challenge
 + Search operation: Show results for the keywords searched by users.
-+ Event hosting and prediction of count: Host events by entering event-details. View prediction of number of users interested in this event
++ Event hosting and prediction of count: Host events by entering event-details. 
+  For prediction: enter the details of events like name, description, venue details etc; Evento will predict the number of people interested in this event based on the number of people who attended similar events in the past. Thus, view prediction of number of users interested in an event even before it is hosted.
 + Event Recommendation: A logged-in user can view recommendations, which the application suggests based on the past events attended by user
 
 ### Technology: MongoDB-Express-React-NodeJS stack, IBM Watson Studio for Data Refinery and Machine Learning
